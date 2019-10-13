@@ -93,7 +93,7 @@
 
 	</style>
 </head>
-<body id="bo" style="height: 800px;/*overflow: hidden;*/">
+<body id="bo" style="height: 800px;overflow: hidden;">
 	<header><div class="wrap">
 		<div id="monitor" style="z-index: 3;"></div>
 		<img src="airplane.png" id="air">
@@ -175,7 +175,7 @@
 				air.style.animation = "fly 1.5s ease-in forwards";
 				box1.style.animation ="disappear 1s 1.5s forwards";
 				list.style.animation = "appear 1s 1.5s forwards";
-				//bo.style.overflow = "visible";
+				bo.style.overflow = "visible";
 		}
 
 		window.onscroll = function(){
