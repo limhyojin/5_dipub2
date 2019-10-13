@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Noto+Serif+JP&display=swap" rel="stylesheet">
+	<style>
+		html {font-family: 'Noto Sans KR', sans-serif;color:#0c3a62}
+		body, h1,h2,h3, p {margin:0; padding:0;}
+		h1 {font-weight:900;font-size:50px; margin-bottom:10px;}
+		h2{font-size:48px; line-height: 1.5; margin-bottom: 15px;}
+		h3{font-size:30px; line-height: 1.5;}
+		p{font-size:20px;letter-spacing: -1px; word-spacing: -2px; line-height: 1.6; word-break: keep-all;}
+		section{position: relative;}
+		section .wrap{ position: relative;}
+		#monitor{position: fixed; background: black;padding: 5px; top:0; right:0;width: 70px;height:20px; color:white;}
+		
+
+		.wrap{width:1000px; margin:auto; height:600px;position:relative;}
+		.wrap2{width:1000px; margin:auto; height:600px;position:relative;}
+		.textbox{position:absolute;}
+		header .wrap {width:100%; height:900px;); overflow: hidden;}
+		#air{position:absolute;width:2000px; top:250px; left:-500px;opacity: 1;}
+		#box1{position:absolute; top:160px;opacity: 1; z-index: 2;}
+		#button{width:250px; height:50px; border-bottom-right-radius: :100px; background-color:#fe7a11;margin-top: 30px;}
+		.round{width:312px; height: 312px;margin-right:32px;background-color: red; border-radius: 100%;}
+		.round2{margin:0px;width:312px; height: 312px;background-color: red; border-radius: 100%; }
+		.can {width:312px; margin-right:32px;display: block;float:left;}
+		
+		.can h3{text-align: center; margin-top:30px;font-size: 30px;}
+		.can p{text-align:center;font-size: 21px;}
+		#list {position:absolute; top:100px;opacity: 0; z-index:1;}
+		#back {width:100%; background-attachment: fixed;}
+		#head1 {position:fixed; width:300px;top:30px; left:68px;margin:0;opacity:0; z-index: 2;}
+		#lou{width:1400px;position: absolute; left: 500px; top:300px;opacity: 0;}
+		#text1{position: absolute; top:200px;}
+		#top1{position:sticky;left:0;top:-50px; width:100%; z-index:1; opacity: 0;}
+		#top2{width:20%;position:fixed;left:0px; top:400px;z-index:1;opacity: 0;}
+		#top3{width:30%;position:fixed;left:350px; top:400px;z-index:1;opacity: 0;}
+	
+		#text2{position:fixed; width:400px; z-index: 2; color:white; left:850px; top:250px; opacity:0;}
+		#text3{position: absolute; top:2000px; left: 850px;}
+		#cam{position:fixed;top:0; left:250px;}
+		#disert1{position: absolute;top:20px;}
+		#disert2{position: absolute;top:-70px; width:400px;left:50%;transform: translateX(-50%);opacity: 0;}
+		#disert3{position: absolute;top:-160px;width: 300px;left:50%;transform: translateX(-50%);opacity: 0;}
+		#text4{position: absolute;top:300px; left:50%;transform: translateX(-50%);top:}
+
+		@keyframes fly{
+			to{left:1000px; top:-500px; opacity: 0;}
+		}
+		@keyframes disappear{
+			to{opacity:0;top:130px;}
+		}
+		@keyframes disappear2{
+			from{opacity: 1;}
+			to{opacity: 0;}
+		}
+		@keyframes appear{
+			to{opacity: 1; top:70px;}
+		}
+		@keyframes appear2{
+			to{opacity: 1;}
+		}
+		@keyframes appear3{
+			to{opacity:1; top:200px;}
+		}
+		@keyframes big{
+			to{width:100%;}
+		}
+		@keyframes side{
+			to{left:300px; opacity: 1;}
+		}
+		@keyframes color{
+			to{color:white;}
+		}
+		@keyframes small{
+			to{width:40%;}
+		}
+		@keyframes disappear3{
+			from{width:40%;}
+			to{width:40%;opacity: 0;}
+		}
+
+		@keyframes dal{
+			from{opacity: 0;}
+			to{opacity: 1;}
+		}
+		@keyframes dal2{
+			from{opacity: 1;}
+			to{opacity: 0;}
+		}
+		
+
+	</style>
+</head>
+<body id="bo" style="height: 800px;/*overflow: hidden;*/">
+	<header><div class="wrap">
+		<div id="monitor" style="z-index: 3;"></div>
+		<img src="airplane.png" id="air">
+		<div class="wrap2">
+			<div id="box1">
+			<h1>Paris Tour</h1>
+			<p style="font-size: 23px;">파리 여행의 꿀팁 정보를 알려드리겠습니다.<br>관광지, 포토스팟, 먹거리까지 섭렵해보세요. </p>
+			<div id="button"><p style="color:white;text-align: center; line-height:50px;">여행 떠나기</p></div>
+			</div>
+			
+			<div id = list>
+				<h2 style="text-align: center;font-size: 48px; margin-bottom: 50px;">List</h2>
+				<div class = "can">
+				<div class="round" style="background: url(paris.jpg); background-size: cover; background-position: -10 20px;"></div>
+				<h3>박물관</h3>
+				<p>루브르, 오랑쥬리, 오르세 박물관에서 전세계의 예술품들을  감상하세요.</p>
+				</div>
+				
+				<div class="can">
+				<div class="round" style="background:url(eiffel.jpg); background-size: cover;background-position: -78px"></div>
+				<h3>야경</h3>
+				<p>고흐의 별헤는 밤처럼 아름다운 파리의 야경을 즐겨보세요.</p>
+				</div>
+				
+				<div class="can" style="margin-right: 0px;">
+				<div class="round2" style="background:url(macaron2.jpg);background-size: cover;background-position: 0 -80px;"></div>
+					<h3>디저트</h3>
+				<p>크레페, 마카롱, 와플 등의 디저트로 여행 내내 달콤한 기분을 느껴보세요.</p>
+				</div>	
+			
+			</div>
+		</div>
+	</div></header>
+	<section style="overflow: hidden;"><h2 id="head1"></h2><div class="wrap" style="height: 1000px;">
+		
+		
+		<div id="text1">
+		<h2 style="font-size: 80px;margin-bottom: 20px;">루브르 박물관</h2>
+		<p style="width:500px;">루브르 박물관은 세계 3대 박물관으로 꼽힌다. 1793년 궁전 일부가 중앙 미술관으로 사용되면서 루브르는 궁전의 틀을 벗고 박물관으로 탈바꿈하기 시작했다. 이후 5세기 동안의 수많은 예술품은 오늘날 30만 점가량에 이른다. 전체를 다 돌아보려면 며칠은 걸리므로 관심 있는 작품이 있으면 그 위치를 파악해 미리 동선을 짜두는 것이 좋다.</p>
+		</div>
+
+		<img src = "louver.png" id="lou">
+	</div></section>
+	<section><div class="wrap" style="width:100%; height: 3000px;opacity: 1; " id="ho" >
+		<img src="eiffel3.jpg" id="top1">
+		<div id="photos" style="position: sticky;width: 100%;" >
+		
+		<img src="eiffel6.jpg" id="top2">
+		<img src="eiffel5.jpg" id="top3">
+		
+		
+	</div>
+		<div id="text2">
+		
+		<h3 style="font-size: 80px">에펠탑</h3>
+		<p>에펠탑은 한발 앞서 철로 대표되는 산업사회가 찾아왔음을 상징적으로 보여준 디자인으로, 파리의 대표적인 명물로 사랑을 받게 되었으며, 1985년 야간 조명시설이 설치된 이후 파리의 아름다운 야경을 만드는 데 일조하고 있다. 그리고 1991년에는 세계문화유산으로 등재되었다.</p>
+	</div>
+		<div id="text3">
+			<h3 style="font-size: 80px; margin-bottom: 20px;">Photo spot</h3>
+			<p style="font-size:23px;">에펠탑이 있는 곳이라면 밤이든 낮이든, 어디라도 포토존</p>
+		</div>
+	</div><</section>
+	<section><div class="wrap" style="height:2000px;">
+		<div style="position: sticky; top:190px;height: 600px; background-color: white;">
+		<img src="macaron.png" id="disert1">
+		<img src="corowasant.png" id="disert2">
+		<img src="crepe2.png" id="disert3">
+		<div style="text-align: center;" id="text4">
+		<h2 style="margin-bottom: 15px;" >달콤한 디저트</h2>
+		<p style="text-align: center;">마카롱, 크로와상, 크레페 등 달콤한 디저트와<br> 커피 한잔으로 파리지앵 기분 제대로 내기</p></div>
+	</div>
+
+	</div></section>
+	<footer><div class="wrap" style="width:100%;height: 200px; background-color: #0c3a62;">
+		<p style="font-size: 15px; color:white;position: absolute;left:50%; transform:translateX(-50%);top:150px;">Copyrightⓒ2019 limhyojin All rights reserved.</p>
+	</div></footer>
+	<script type="text/javascript">
+		button.onclick = function(){
+				air.style.animation = "fly 1.5s ease-in forwards";
+				box1.style.animation ="disappear 1s 1.5s forwards";
+				list.style.animation = "appear 1s 1.5s forwards";
+				//bo.style.overflow = "visible";
+		}
+
+		window.onscroll = function(){
+		var t = document.documentElement.scrollTop + document.body.scrollTop;
+		console.log(t);
+		monitor.innerHTML = t.toFixed(1);
+
+		if(t>500){
+			head1.style.animation = "appear 1s forwards";
+			
+		}else{head1.style.animation = "";}
+		if(t>800){lou.style.animation = "side 1s forwards";}
+		else{lou.style.animation = "";}
+		if(t>1700){top1.style.animation = "appear2 1s forwards";
+		head1.style.color="white";
+		text2.style.animation = "appear3 1s forwards";
+		}
+		else{top1.style.animation = "";
+			head1.style.color="inherit";
+			text2.style.animation = "";}
+		if(t>2900){head1.style.color="inherit";}
+		if(t>2600){top1.style.animation="small 1s forwards";
+				text2.style.animation="inherit"
+				top1.style.opacity="1";
+				photos.style.width="1000px";}
+				else{top1.style.opacity="";}
+
+
+		if(t>3000){top2.style.animation="appear2 1s forwards";}
+		else{top2.style.animation="";}
+		if(t>3200){top3.style.animation="appear2 1s forwards";}
+		else{top3.style.animation="";}
+		if(t>3900){top3.style.animation="disappear2 1s forwards";
+			top2.style.animation="disappear2 1s forwards";
+				top1.style.animation ="disappear3 1s forwards";}
+		if(t>5200){disert1.style.animation = "dal2 1s forwards";
+		disert2.style.animation="dal 1s forwards";}
+		else{disert1.style.animation = "";
+		disert2.style.animation="";}
+		if(t>5650){disert2.style.animation = "dal2 1s forwards";
+		disert3.style.animation = "dal 1s forwards";}
+		else{disert3.style.animation="dal2 1s forwards";}
+	
+
+		}
+	</script>
+</body>
+</html>
